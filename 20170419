@@ -1,0 +1,9 @@
+1、ES集群搭建：
+   配置：./conf/elasticsearch.yml
+   启动: ./bin/elasticsearch
+   端口: 9200
+         9300
+2、kibana安装：
+   配置文件: config/kibana.yum中将server.host: "localhost" 改为具体IP地址，否则其它机器不能访问kibana
+   启动: ./bin/kibana
+   端口:  5601
