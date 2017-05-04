@@ -1,0 +1,1 @@
+1、 elasticsearch 5.3 不支持centos 6.X解决方法：bootstrap.system_call_filter: false   （centos7 上不存在此问题）
