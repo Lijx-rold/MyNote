@@ -1,19 +1,36 @@
 1、linux修改文件所属用户和组
 
    使用chown命令可以修改文件或目录所属的用户：
-
        命令：chown 用户 目录或文件名
-
-       例如：chown qq /home/qq  (把home目录下的qq目录的拥有者改为qq用户) 
-
+       例如：chown qq /home/qq  (把home目录下的qq目录的拥有者改为qq用户)
+       
    使用chgrp命令可以修改文件或目录所属的组：
-
        命令：chgrp 组 目录或文件名
-
        例如：chgrp qq /home/qq  (把home目录下的qq目录的所属组改为qq组)
 
 2、centos7 直接关闭防火墙
 
    systemctl stop firewalld.service #停止firewall
-
    systemctl disable firewalld.service #禁止firewall开机启动
+   
+3、centos 查看版本
+
+   # lsb_release -a
+   LSB Version:    :core-3.1-ia32:core-3.1-noarch:graphics-3.1-ia32:graphics-3.1-noarch
+   Distributor ID: CentOS
+   Description:    CentOS release 5.4 (Final)
+   Release:        5.4
+   Codename:       Final
+   
+4、查看当前使用的系统语言
+   echo $LANG可以
+
+5、查看已安装的语言包
+   locale命令
+  
+6、修改源信息（添加阿里源和网易源）
+   （1）源所在的目录:     /etc/yum.repos.d/ 
+   （2）wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo      这个是6.X的阿里源
+        wget http://mirrors.163.com/.help/CentOS6-Base-163.repo   这个是网易的6.x的源
+   （3）下载成功以后执行yum clean all命令,
+        然后执行yum makecache命令,当yum makecache完成以后,源就安装完了
