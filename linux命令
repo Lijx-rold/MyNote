@@ -34,3 +34,6 @@
         wget http://mirrors.163.com/.help/CentOS6-Base-163.repo   这个是网易的6.x的源
    （3）下载成功以后执行yum clean all命令,
         然后执行yum makecache命令,当yum makecache完成以后,源就安装完了
+
+7、ps、grep和kill联合使用杀掉进程
+   ps -ef |grep importEs |awk '{print $2}'|xargs kill -9
