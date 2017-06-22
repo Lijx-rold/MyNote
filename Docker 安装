@@ -1,5 +1,0 @@
-需要先安装yum 源.
-yum -y install http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-再执行
-yum install docker-io
-就可以正常安装了!!
